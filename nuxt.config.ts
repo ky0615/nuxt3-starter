@@ -1,6 +1,17 @@
-import { defineNuxtConfig } from '@nuxt/kit'
+import { defineNuxtConfig } from 'nuxt3'
 
 export default defineNuxtConfig({
     srcDir: 'app/',
-    buildModules: [],
+    buildModules: [['nuxt-storm', { nested: true }]],
+    build: {
+        transpile: ['vuetify'],
+        postcss: {
+            postcssOptions: {
+                plugins: {
+                    tailwindcss: {},
+                    autoprefixer: {},
+                },
+            },
+        },
+    },
 })

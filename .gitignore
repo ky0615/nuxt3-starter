@@ -121,6 +121,9 @@ flycheck_*.el
 # Generated files
 .idea/**/contentModel.xml
 
+.idea/**/compiler.xml
+
+
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
@@ -388,7 +391,8 @@ dist
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -481,3 +485,7 @@ gradle-app.setting
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,osx,intellij,emacs,vim,node,kotlin,java,gradle,node,c++,cmake
+
+
+.output
+.components.gen.js

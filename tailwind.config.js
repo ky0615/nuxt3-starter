@@ -61,6 +61,7 @@ const colorPalette = {
 }
 
 const plugins = [
+    require('@tailwindcss/forms'),
     plugin(function({ addUtilities }) {
         const newUtilities = {
             '.horizontal-tb': {
@@ -84,6 +85,7 @@ const plugins = [
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
+    mode: 'jit',
     purge: {
         // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
         enabled: process.env.NODE_ENV === 'production',
@@ -94,8 +96,8 @@ module.exports = {
             'app/pages/**/*.vue',
             'app/plugins/**/*.js',
             'app/plugins/**/*.ts',
-            'app/nuxt.config.js',
-            'app/nuxt.config.ts',
+            'nuxt.config.js',
+            'nuxt.config.ts',
             'app/safelist.txt',
         ],
     },

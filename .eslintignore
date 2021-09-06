@@ -1,0 +1,42 @@
+.git/
+.github/
+
+node_modules
+.gitignore
+
+tsconfig.json
+tsconfig.server.json
+jsconfig.json
+webpack.config.js
+vuetify.options.js
+tailwind.config.js
+download-swagger.js
+package.json
+package-lock.json
+yarn.lock
+coverage/
+
+# .nuxt/
+.nuxt/dist
+.nuxt/nitro
+
+
+dist/
+www/
+
+*.scss
+*.css
+
+# aspida
+app/apis/
+cordova/
+
+*.json
+
+# views/error.html (SSR error page)
+app/app/views/error.html
+app/app.html
+
+# static html
+app/static
+app/static/js

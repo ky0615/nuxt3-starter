@@ -1,29 +1,21 @@
 <template>
-    <div>
-        <div class="">count: {{ count }}</div>
-        <button @click="onClick">click</button>
+    <div class="mt-6">
+        <lazy-logo />
+        <div class="">count: {{ state.countNum }}</div>
+        <button class="bg-c-primary p-2 hover:bg-c-primary-light-2" @click="onClick">click</button>
+        <p>
+            <nuxt-link to="about">goto about</nuxt-link>
+        </p>
     </div>
 </template>
-
-<script lang="ts">
-import { defineNuxtComponent } from 'nuxt3/dist/app/composables/component'
-
-export default defineNuxtComponent({
-    setup() {
-        const count = ref(0)
-
-        const onClick = () => {
-            count.value += 1
-        }
-
-        return {
-            count,
-            onClick,
-        }
-    },
+<script lang="ts" setup>
+const state = reactive({
+    countNum: 0,
 })
+
+const onClick = () => {
+    state.countNum += 1
+}
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
